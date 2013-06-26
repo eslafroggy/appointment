@@ -31,7 +31,7 @@ class PatientsController < ApplicationController
   end
 
   def destroy
-      @patients = Patients.find(params[:id])
+      @patient = Patient.find(params[:id])
 
       @patient.destroy
 

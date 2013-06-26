@@ -9,6 +9,7 @@
 <label>Select Doctor</label>
 <%= f.collection_select :doctor_id, Doctor.all, :id, :name %>
 <br>
+<br>
 <label>Select Patient</label>
 <%= f.collection_select :patient_id, Patient.all, :id, :name %>
 <br>
