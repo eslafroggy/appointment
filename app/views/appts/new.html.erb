@@ -1,2 +1,16 @@
-<h1>Appts#new</h1>
-<p>Find me in app/views/appts/new.html.erb</p>
+<h1>Appts new</h1>
+
+
+<%= form_for @appt do |f|  %>
+<label> Appointment Date </label>
+<br>
+<%= f.text_field :appt_date %>
+<br>
+<label>Select Doctor</label>
+<%= f.collection_select :doctor_id, Doctor.all, :id, :name %>
+<br>
+<label>Select Patient</label>
+<%= f.collection_select :patient_id, Patient.all, :id, :name %>
+<br>
+<%= f.submit %>
+<% end %>

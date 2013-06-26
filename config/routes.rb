@@ -1,45 +1,8 @@
 Appointment::Application.routes.draw do
-  get "patients/index"
+  resources :doctors
+  resources :patients
+  resources :appts
 
-  get "patients/new"
-
-  get "patients/create"
-
-  get "patients/edit"
-
-  get "patients/update"
-
-  get "patients/destroy"
-
-  get "patients/show"
-
-  get "appts/index"
-
-  get "appts/new"
-
-  get "appts/create"
-
-  get "appts/edit"
-
-  get "appts/update"
-
-  get "appts/destroy"
-
-  get "appts/show"
-
-  get "doctors/index"
-
-  get "doctors/new"
-
-  get "doctors/create"
-
-  get "doctors/edit"
-
-  get "doctors/update"
-
-  get "doctors/destroy"
-
-  get "doctors/show"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -90,7 +53,7 @@ Appointment::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  # root :to => 'welcome#index'
+  root :to => 'appts#index'
 
   # See how all your routes lay out with "rake routes"
 

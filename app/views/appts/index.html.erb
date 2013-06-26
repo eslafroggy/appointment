@@ -1,2 +1,15 @@
-<h1>Appts#index</h1>
-<p>Find me in app/views/appts/index.html.erb</p>
+<h1>Appts index</h1>
+
+<% @appts.each do |appt| %>
+  <p>
+    <%= link_to(appt.appt_date, appt_path(appt.id)) %> -
+    <%= link_to("Edit", edit_appt_path(appt.id)) %> -
+    <%= link_to("Delete", appt_path(appt.id), :method => :delete) %>
+  </p>
+
+<% end %>
+
+<p>
+<%= link_to "New Appt", new_appt_path %>
+</p>
+

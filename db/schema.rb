@@ -11,14 +11,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130625223356) do
+ActiveRecord::Schema.define(:version => 20130626010410) do
 
   create_table "appts", :force => true do |t|
-    t.integer  "physician_id"
+    t.integer  "doctor_id"
     t.integer  "patient_id"
     t.datetime "appt_date"
-    t.datetime "created_at",   :null => false
-    t.datetime "updated_at",   :null => false
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "doctors", :force => true do |t|
